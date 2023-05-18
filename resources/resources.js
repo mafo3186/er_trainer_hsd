@@ -220,7 +220,7 @@ export const notations = {
     "key": "abrial",
     "title": "Abrial",
     "centered": true,
-    "comment": "Die Abrial bzw. (min,max)-Notation gibt für jeden an einer Beziehung beteiligten Entitätentyp an, mit wie vielen Entitäten auf der anderen Seite eine Entität dieses Typs mindestens und höchstens in Beziehung steht."
+    "comment": "Die Abrial bzw. (min,max)-Notation gibt für jeden an einer Beziehung beteiligten Entitätentyp an, mit wie vielen Entitäten auf der anderen Seite eine Entität dieses Typs mindestens und höchstens in Beziehung steht. Beispiel \"Mond hat Planet\": Ein Planet hat keinen, einen oder mehrere Monde. -> Ein Planet nimmt bedingt mehrfach an der Beziehung zu Mond teil. -> Notation (0, *) auf der Planetenseite. Ein Mond gehört immer zu genau einem Planeten -> Ein Mond nimmt einfach an der Beziehung zu Planet teil. -> Notation (1,1) auf der Mondseite."
   },
   "arrow": {
     "key": "arrow",
@@ -233,7 +233,7 @@ export const notations = {
     "title": "Chen",
     "swap": true,
     "centered": true,
-    "comment": "In der Chen-Notation sind nur einfache und mehrfache Beziehungstypen (1 und N) darstellbar, da die Beziehungsmengen bei Chen nur in ihrer Maximalaussage genannt werden. Bei Phrasen die auf einen bedingten oder mehrfach bedingten Beziehungstyp hindeuten, sollte besser zu einer anderen Notation gewechselt werden."
+    "comment": "In der Chen-Notation sind nur einfache und mehrfache Beziehungstypen (1 und N) darstellbar, da die Beziehungsmengen bei Chen nur in ihrer Maximalaussage genannt werden. Der ER-Trainer bewertet nur die Lösung als korrekt, in der bei gleicher Notation außerdem die richtige Auswahl für bedingte oder nicht bedingte Beziehungstypen getroffen wird. Empfohlen wird die Auswahl des Beziehungstyps in einer anderen Notation und ein anschließender Wechsel zur Chen-Notation nur zur Ansicht. Beispiel \"Mond hat Planet\": Ein Planet hat keinen, einen oder mehrere Monde. -> Ein Planet nimmt bedingt mehrfach an der Beziehung zu Mond teil. -> Notation N auf Mondseite. Ein Mond gehört immer zu genau einem Planeten -> Ein Mond nimmt einfach an der Beziehung zu Planet teil. -> Notation 1 auf Planetenseite. "
   },
   "crow": {
     "key": "crow",
@@ -249,6 +249,7 @@ export const notations = {
   "uml": {
     "key": "uml",
     "swap": true,
-    "title": "UML"
+    "title": "UML",
+    "comment": "Die UML-Notation gibt für jeden an einer Beziehung beteiligten Entitätentyp an, wie viele Entitäten dieses Typs mit Entitäten des Typs auf der anderen Seite mindestens und höchstens in Beziehung stehen. Beispiel \"Mond hat Planet\": Ein Planet hat keinen, einen oder mehrere Monde. -> Ein Planet nimmt bedingt mehrfach an der Beziehung zu Mond teil. -> Notation 0..* auf der Mondseite. Ein Mond gehört immer zu genau einem Planeten -> Ein Mond nimmt einfach an der Beziehung zu Planet teil. -> Notation 1..1) auf der Planetenseite."
   }
 };
