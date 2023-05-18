@@ -56,7 +56,11 @@ export function main( app, data, events, phrase_nr, show_solution ) {
     </header>
     <main class="border rounded-bottom border-top-0 px-4 py-2">
       <div>
-        
+        <!-- Notation Comment -->
+        <section ?data-hidden=${ !notation.comment || app.feedback && section.correct !== undefined }>
+            <div class="alert alert-info mt-3 mb-0" role="alert">${ notation.comment }</div>
+        </section>
+          
         <!-- Phrase -->
         <section class="lead text-nowrap px-2 py-3" ?data-hidden=${ !phrase.text }>
           <b>
@@ -105,10 +109,7 @@ export function main( app, data, events, phrase_nr, show_solution ) {
           ` ) }
         </section>
 
-        <!-- Notation Comment -->
-        <section ?data-hidden=${ !notation.comment || app.feedback && section.correct !== undefined }>
-          <div class="alert alert-info mt-3 mb-0" role="alert">${ notation.comment }</div>
-        </section>
+
         
         <!-- Correct Solution -->
         <div ?data-hidden=${ !show_solution || !app.feedback || !app.show_solution || section.correct !== false }>
